@@ -67,7 +67,7 @@ rewrite();
 //---do it using ‘while’
 function askWhile() {
     var ask = 0;
-    while (ask < 100) {
+    while (ask < 100 || isNaN(ask)) {
         ask = prompt("put number greater than 100", "101");
     }
     console.log(ask);
@@ -79,7 +79,7 @@ function askDoWhile() {
     do {
         ask = prompt("put number greater than 100", "999");
     }
-    while (ask < 100)
+    while (ask < 100 || isNaN(ask))
     console.log(ask);
 }
 askDoWhile();
